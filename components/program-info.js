@@ -6,7 +6,7 @@ export default function ProgramInfo() {
   return (
     <div className="mt-20 scroll-smooth">
       <WidthConstraint>
-        <h1 className="mb-20 text-start text-3xl font-bold text-[#FF5722]">
+        <h1 className="mb-10 text-start text-3xl font-bold text-[#FF5722]">
           Program Overview
         </h1>
         <section className="flex flex-col gap-y-20 lg:gap-y-0 lg:flex-row items-center justify-between">

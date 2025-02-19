@@ -5,7 +5,7 @@ import FeaturedCourses from "./featured-courses";
 
 export default function KeyFeatures() {
   return (
-    <div>
+    <div id="features" className="scroll-m-20">
       <WidthConstraint>
         <h1 className="mb-10 text-start text-3xl font-bold text-[#FF5722]">
           What Makes Us Different
@@ -41,7 +41,7 @@ export default function KeyFeatures() {
 
           {/* offerd courses */}
           <div className="bg-[#B8E6C1] rounded-xl shadow-black shadow-xl border border-[#B8E6C1] py-5 px-10 flex-1">
-            <div className="flex flex-col lg:flex-row items-center justify-between">
+            <div className="flex flex-col md:flex-row items-center justify-between">
               <FeaturedCourses />
               <Image
                 src="/assets/home/logo.jpg"

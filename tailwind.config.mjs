@@ -8,6 +8,7 @@ export default {
   ],
   theme: {
     extend: {
+      scrollBehavior: ["smooth"],
       backgroundImage: {
         customGradient:
           "linear-gradient(-45deg, #ee7752, #ff006275, #23a6d5, #23d5ab)",

@@ -50,3 +50,76 @@ export const featuredCourses = {
   colors: ["#306998", "#F7DF1E", "#217346", "#00618A"],
   language: ["#SQL", "#JavaScript", "#Excel", "#Python"],
 };
+
+export const reviewCard = [
+  {
+    name: "Emmanuel Nutsugah",
+    courseTaken: "Data Analytics with Python",
+    dateCompleted: "2023-09-15",
+    letterImage: "E",
+    rating: "⭐⭐⭐⭐⭐",
+    reviewDate: "2024-01-05",
+    review:
+      "This course gave me a solid foundation in Python for data analysis. The real-world projects were a game changer!",
+    love: "❤️ 112",
+  },
+  {
+    name: "Sandra Mensah",
+    courseTaken: "SQL for Data Analysis",
+    dateCompleted: "2023-07-22",
+    letterImage: "S",
+    rating: "⭐⭐⭐⭐",
+    reviewDate: "2023-11-10",
+    review:
+      "I now feel confident writing complex SQL queries. The practical exercises were extremely helpful!",
+    love: "❤️ 89",
+  },
+  // {
+  //   name: "Desmond Boateng",
+  //   courseTaken: "BI & Visualization",
+  //   dateCompleted: "2024-02-01",
+  //   letterImage: "D",
+  //   rating: "⭐⭐⭐⭐⭐",
+  //   reviewDate: "2024-02-15",
+  //   review:
+  //     "Power BI and Tableau were explained so well! My reporting skills improved drastically.",
+  //   love: "❤️ 135",
+  // },
+  {
+    name: "Desmond Boateng",
+    courseTaken: "Machine Learning for BI",
+    dateCompleted: "2024-02-01",
+    letterImage: "D",
+    rating: "⭐⭐⭐⭐",
+    reviewDate: "2024-02-15",
+    review:
+      "A great introduction to machine learning for analysts. The real-world datasets were a nice touch.",
+    love: "❤️ 137",
+  },
+  {
+    name: "Aisha Sulemana",
+    courseTaken: "Machine Learning",
+    dateCompleted: "2023-10-10",
+    letterImage: "A",
+    rating: "⭐⭐⭐⭐",
+    reviewDate: "2024-02-01",
+    review:
+      "A great introduction to machine learning for analysts. The real-world datasets were a nice touch.",
+    love: "❤️ 97",
+  },
+];
+
+export const navLinks = [
+  {
+    name: "About",
+    link: "#about",
+  },
+  {
+    name: "Features",
+    link: "#features",
+  },
+  {
+    name: "Contact",
+    link: "#contact",
+  },
+];

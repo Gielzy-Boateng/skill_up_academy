@@ -9,7 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mantine/carousel": "^7.17.0",
+    "@mantine/core": "^7.17.0",
+    "@mantine/hooks": "^7.17.0",
     "clsx": "^2.1.1",
+    "embla-carousel-autoplay": "^7.1.0",
+    "embla-carousel-react": "^8.5.2",
+    "framer-motion": "^12.4.5",
+    "lucide": "^0.475.0",
+    "lucide-react": "^0.475.0",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

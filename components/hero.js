@@ -15,7 +15,8 @@ export default function Hero() {
             career with confidence.
           </h1>
           <CustomButton
-            btn={true}
+            btn={false}
+            href={"#contact"}
             className="bg-white text-xl font-semibold transition-all hover:text-white hover:bg-black duration-300 text-black rounded-lg shadow-black hover:shadow-white shadow-lg"
           >
             Start Learning Today

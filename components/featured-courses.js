@@ -1,5 +1,6 @@
 import { featuredCourses } from "@/constants";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function FeaturedCourses() {
   return (
@@ -8,7 +9,8 @@ export default function FeaturedCourses() {
       <p className="text-xl">{featuredCourses.description}</p>
       <div className="grid grid-cols-2 gap-4  ">
         {featuredCourses.language.map((lang, i) => (
-          <p
+          <Link
+            href="#contact"
             className="hover:cursor-pointer transition-all relative duration-300 group px-4 py-2 font-bold text-white "
             key={lang}
             style={{ backgroundColor: `${featuredCourses.colors[i]}` }}
@@ -21,12 +23,12 @@ export default function FeaturedCourses() {
             <span className="text-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               Sign Up Now!
             </span>
-          </p>
+          </Link>
         ))}
       </div>
       <div className="grid grid-cols-4 gap-4 mt-5 mb-10 lg:mb-0 ">
         {featuredCourses.image.map((img, i) => (
-          <div key={i}>
+          <Link href="#contact" key={i}>
             <Image
               src={img}
               alt="Languages"
@@ -34,7 +36,7 @@ export default function FeaturedCourses() {
               height={40}
               className="rounded-full"
             />
-          </div>
+          </Link>
         ))}
       </div>
     </div>

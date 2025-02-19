@@ -123,3 +123,26 @@ export const navLinks = [
     link: "#contact",
   },
 ];
+
+export const media = [
+  {
+    icon: "/assets/home/fb.svg",
+    name: "Facebook",
+    url: "/",
+  },
+  {
+    icon: "/assets/home/twitter.svg",
+    name: "Twiiter",
+    url: "/",
+  },
+  {
+    icon: "/assets/home/insta.svg",
+    name: "Instagramk",
+    url: "/",
+  },
+  {
+    icon: "/assets/home/whatsapp.svg",
+    name: "Whatsapp",
+    url: "/",
+  },
+];

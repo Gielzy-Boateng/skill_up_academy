@@ -63,8 +63,8 @@ export default function FormField() {
       className="scroll-m-20 mt-20 relative bg-[url(/assets/home/form-bg.jpg)]  w-full "
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10 " />
-      <WidthConstraint>
-        <h1 className="relative z-20 mb-10 text-start text-3xl font-bold text-[#FF5722]">
+      <WidthConstraint className="py-10">
+        <h1 className="relative z-20 mb-10 text-start text-4xl font-bold text-[#FF4500]">
           Sign Up Now!
         </h1>
         <div className="relative z-20 mx-auto max-w-[600px] flex-col items-center justify-center">
@@ -108,7 +108,7 @@ export default function FormField() {
               disabled={!email || isSending || message}
               className={`${
                 !email ? "cursor-not-allowed" : "cursor-pointer"
-              } w-full bg-[#FF5722] text-white font-bold hover:bg-black py-2 transition-all duration-200 rounded-xl`}
+              } w-full bg-[#FF6D00] text-white font-bold hover:bg-black py-2 transition-all duration-200 rounded-xl`}
             >
               {isSending ? <Spinner /> : "Submit"}
             </button>

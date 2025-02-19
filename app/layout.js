@@ -3,6 +3,7 @@ import { MantineProvider } from "@mantine/core";
 import "./globals.css";
 import "@mantine/carousel/styles.css";
 import NavBar from "@/components/nav-bar";
+import Footer from "@/components/footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className={` antialiased scroll-smooth`}>
         <NavBar />
         <MantineProvider>{children}</MantineProvider>
+        <Footer />
       </body>
     </html>
   );

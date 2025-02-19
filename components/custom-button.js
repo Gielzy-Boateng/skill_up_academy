@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export default function CustomButton({ children, btn, linkBtn, className }) {
+export default function CustomButton({ children, btn, href, className }) {
   return (
     <div>
       {btn ? (
@@ -9,7 +9,10 @@ export default function CustomButton({ children, btn, linkBtn, className }) {
           {children}
         </button>
       ) : (
-        <Link className={cn("px-6 py-4 text-black bg-blue-500", className)}>
+        <Link
+          href={href}
+          className={cn("px-6 py-4 text-black bg-blue-500", className)}
+        >
           {children}
         </Link>
       )}

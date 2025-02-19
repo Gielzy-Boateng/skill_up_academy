@@ -17,7 +17,7 @@ export default function ReviewsCarousel() {
         height={20}
         slidesToScroll={1}
         align="start"
-        slideGap={{ base: "2%", sm: "3%", md: "3%" }}
+        slideGap={{ base: "2%", sm: "3%", md: "2%" }}
         plugins={[autoPlay.current]}
         onMouseEnter={autoPlay.current.stop}
         onMouseLeave={autoPlay.current.reset}
@@ -51,7 +51,7 @@ export default function ReviewsCarousel() {
                 </div>
               </div>
               <div className="flex items-center gap-x-3">
-                <>{review.rating}</>
+                <p>{review.rating}</p>
                 <p className="font-bold">{review.dateCompleted}</p>
               </div>
               <div className="mt-5">

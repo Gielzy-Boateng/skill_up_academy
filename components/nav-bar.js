@@ -31,7 +31,10 @@ export default function NavBar() {
         visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
       }`}
     >
-      <div className="flex items-center">
+      <Link
+        href="/"
+        className="flex items-center transition-all duration-300 hover:text-[#FF6D00]"
+      >
         <Image
           src={"/assets/home/header-logo.png"}
           width={50}
@@ -39,20 +42,25 @@ export default function NavBar() {
           alt="Header"
         />
         <h1>SkillUp Academy</h1>
+      </Link>
+      <div className="scroll-smooth flex items-center  gap-x-5">
+        {navLinks.map((nav, i) => (
+          <Link
+            key={i}
+            href={nav.link}
+            className="transition-all duration-300 hover:text-[#FF6D00]"
+          >
+            {nav.name}
+          </Link>
+        ))}
       </div>
-      <div className="">
-        <div className="scroll-smooth flex items-center gap-x-5">
-          {navLinks.map((nav, i) => (
-            <Link key={i} href={nav.link}>
-              {nav.name}
-            </Link>
-          ))}
-        </div>
-      </div>
-      <div className="flex transition-all duration-300 hover:bg-white font-semibold hover:text-black  items-center gap-x-3 border-2 py-2 px-3 rounded-full border-white ">
+      <Link
+        href="/dashboard"
+        className="flex transition-all duration-300 hover:bg-white font-semibold hover:text-black  items-center gap-x-3 border-2 py-2 px-3 rounded-full border-white "
+      >
         <div className="w-3 h-3 bg-[#FF5722] hover:bg-black rounded-full" />
         <p>Dashboard</p>
-      </div>
+      </Link>
     </nav>
   );
 }

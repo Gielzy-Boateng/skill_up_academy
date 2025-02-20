@@ -119,7 +119,7 @@ export const navLinks = [
     link: "#features",
   },
   {
-    name: "Contact",
+    name: "SignUp",
     link: "#contact",
   },
 ];

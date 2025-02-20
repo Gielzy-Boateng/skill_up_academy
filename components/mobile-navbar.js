@@ -23,7 +23,7 @@ export default function MobileNavBar() {
   const router = useRouter();
 
   function getIntouch() {
-    router.push("/contact");
+    router.push("/dashboard");
     setDisplay(false);
   }
 
@@ -65,7 +65,7 @@ export default function MobileNavBar() {
 
   return (
     <nav className="px-3 z-50 lg:hidden">
-      <sction
+      <section
         className={` ${
           scrolled ? "bg-white" : ""
         } flex transition-all duration-300 z-50 items-center justify-between px-5 fixed top-0 left-0 right-0`}
@@ -78,6 +78,7 @@ export default function MobileNavBar() {
               width={80}
               height={80}
               className="rounded-full"
+              priority
             />
           </Link>
         </div>
@@ -90,7 +91,7 @@ export default function MobileNavBar() {
             />
           </button>
         </div>
-      </sction>
+      </section>
 
       <AnimatePresence>
         {display && (
@@ -110,6 +111,7 @@ export default function MobileNavBar() {
                   width={100}
                   height={100}
                   className="rounded-full"
+                  priority
                 />
               </Link>
               <button onClick={handleClose} className="">

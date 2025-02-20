@@ -26,6 +26,7 @@ export default function KeyFeatures() {
                       width={200}
                       height={200}
                       className="lg:w-full rounded-xl"
+                      priority
                     />
                   </div>
                   <div className="space-y-3">

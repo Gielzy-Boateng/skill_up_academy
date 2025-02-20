@@ -25,10 +25,11 @@ export default function Hero() {
         <div className="hidden lg:block">
           <Image
             src={"/assets/home/hero.png"}
-            alt="Unity"
+            alt="Hero"
             width={600}
             height={600}
             className="rounded-xl"
+            priority
           />
         </div>
       </WidthConstraint>

@@ -29,7 +29,7 @@ export default function NavBar() {
   return (
     <>
       <nav
-        className={`hidden  transition-all duration-700 max-w-[900px] mx-auto mt-5 rounded-full fixed left-0 right-0 top-0 z-50 text-white bg-black py-2 px-6 lg:flex items-center justify-between  ${
+        className={`hidden transition-all duration-700 max-w-[900px] mx-auto mt-3 rounded-full fixed left-0 right-0 top-0 z-50 text-white bg-black py-2 px-6 lg:flex items-center justify-between  ${
           visible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
         }`}
       >

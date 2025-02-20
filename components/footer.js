@@ -1,14 +1,23 @@
+"use client";
+
 import { media } from "@/constants";
 import Image from "next/image";
 import WidthConstraint from "./width-constraint";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const currentDate = new Date().getFullYear();
 
+  const pathName = usePathname();
+
   return (
     // <footer className="bg-gradient-to-br from-[#130428] via-[#38126D] to-[#190634]">
-    <footer className="bg-[#FF5722]">
+    <footer
+      className={`${
+        pathName.startsWith("/dashboard") ? "bg-[#1E3A8A]" : "bg-[#FF5722]"
+      }`}
+    >
       <WidthConstraint>
         <section className="text-white py-10 flex flex-col items-center justify-center space-y-10 mb-5">
           <div className="flex items-center gap-x-5">

@@ -8,9 +8,6 @@ import { useEffect, useRef, useState } from "react";
 import { MenuIcon, XIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-// import { HamburgerIcon } from "lucide-react";
-// import { HamIcon } from "lucide-react";
-
 export default function MobileNavBar() {
   const [display, setDisplay] = useState(false);
   const menuRef = useRef(null);
@@ -51,22 +48,46 @@ export default function MobileNavBar() {
     };
   }, [setDisplay]);
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="px-3 z-[45] lg:hidden">
-      <sction className="flex items-center justify-between px-5 fixed top-0 left-0 right-0">
+    <nav className="px-3 z-50 lg:hidden">
+      <sction
+        className={` ${
+          scrolled ? "bg-white" : ""
+        } flex transition-all duration-300 z-50 items-center justify-between px-5 fixed top-0 left-0 right-0`}
+      >
         <div className="py-4">
           <Link href="/">
             <Image
-              src="/brand-logo.png"
+              src="/assets/home/logo.jpg"
               alt="brandlogo"
               width={80}
               height={80}
+              className="rounded-full"
             />
           </Link>
         </div>
         <div className="">
-          <button onClick={handleDisplay}>
-            <MenuIcon size={40} />
+          <button onClick={handleDisplay} className="font-bold">
+            <MenuIcon
+              size={50}
+              fontWeight="bold"
+              color={scrolled ? "black" : "white"}
+            />
           </button>
         </div>
       </sction>
@@ -84,18 +105,19 @@ export default function MobileNavBar() {
             <div className="flex items-center justify-between mb-10">
               <Link href="/">
                 <Image
-                  src="/brand-logo.png"
+                  src="/assets/home/logo.jpg"
                   alt="brandLogo"
                   width={100}
                   height={100}
+                  className="rounded-full"
                 />
               </Link>
               <button onClick={handleClose} className="">
-                <XIcon color="#38126D" size={35} />
+                <XIcon color="black" size={45} />
               </button>
             </div>
             <div className="flex flex-col  items-start   justify-start px-4 ">
-              <ul className="flex flex-col items-start gap-y-5 text-[#38126D] w-full font-semibold">
+              <ul className="flex flex-col items-start gap-y-5 text-black w-full font-semibold">
                 {navLinks.map((nav, i) => {
                   function handleNav() {
                     router.push(nav.link);
@@ -109,7 +131,7 @@ export default function MobileNavBar() {
                       //   borderBottomColor: "#2F9AFF",
                       // }}
                       transition={{ duration: 0.2 }}
-                      className="list-none flex hover:bg-[#38126D] hover:text-white hover:py-2 hover:px-4 rounded-full w-full pb-2 text-[18px]"
+                      className="list-none flex hover:bg-[#FF7A00] hover:text-white hover:py-2 hover:px-4 rounded-full w-full pb-2 text-[18px]"
                       key={i}
                       onClick={handleNav}
                     >
@@ -121,8 +143,8 @@ export default function MobileNavBar() {
                 })}
               </ul>
             </div>
-            <div className="flex items-center justify-center center bg-[#38126D] hover:bg-black hover:text-white transition duration-300 rounded-full text-white py-2 mt-5">
-              <button onClick={getIntouch}>Get in touch</button>
+            <div className="flex items-center justify-center center bg-[#FF7A00] hover:bg-black hover:text-white transition duration-300 rounded-full text-white py-2 mt-5">
+              <button onClick={getIntouch}>Dashboard</button>
             </div>
           </motion.div>
         )}

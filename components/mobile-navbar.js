@@ -170,8 +170,10 @@ export default function MobileNavBar() {
               <ul className="flex flex-col items-start gap-y-5 text-black w-full font-semibold">
                 {navLinks.map((nav, i) => {
                   function handleNav() {
-                    router.push(nav.link);
-                    setDisplay(false);
+                    const linkPaths =
+                      pathname === "/" ? `#${nav.link}` : `/#${nav.link}`;
+                    router.push(linkPaths);
+                    // setDisplay(false);
                   }
 
                   return (
@@ -210,12 +212,3 @@ export default function MobileNavBar() {
     </nav>
   );
 }
-
-// <div className="-translate-y-3">
-// <button
-//   onClick={handleMobile}
-//   className="block z-40 fixed md:hidden"
-// >
-//   <MenuIcon fontSize={50} />
-// </button>
-// </div>

@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function Dashboard() {
   return (
-    <WidthConstraint className="mt-28">
-      <div className=" text-lg font-bold flex flex-col items-center md:items-start mb-10">
+    <WidthConstraint className="mt-28 px-10">
+      <div className=" font-bold flex flex-col items-center md:items-start mb-10">
         <h1 className="bebasNeue tracking-wider text-[40px] leading-normal lg:text-[50px] text-[#1E3A8A] font-bold ">
           Welcome, Admin!
         </h1>

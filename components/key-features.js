@@ -7,7 +7,7 @@ export default function KeyFeatures() {
   return (
     <div id="features" className="scroll-m-20">
       <WidthConstraint>
-        <h1 className="mb-10 text-start text-3xl font-bold text-[#FF5722]">
+        <h1 className="mb-10 text-center lg:text-start bebasNeue tracking-wider text-[40px] lg:text-[50px] font-bold text-[#FF5722]">
           What Makes Us Different
         </h1>
         <div className="flex flex-col gap-y-10">

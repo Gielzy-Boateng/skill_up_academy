@@ -6,7 +6,7 @@ export default function Courses() {
   return (
     <WidthConstraint className="mt-32 md:mt-32">
       <div className="container mx-auto px-4 py-6">
-        <h2 className="text-2xl font-bold text-center mb-4 text-orange-600">
+        <h2 className="ebasNeue tracking-wider text-[30px] leading-normal lg:text-[40px] font-bold text-center mb-4 text-orange-600">
           Available Data Analytics Courses
         </h2>
         <div className="overflow-x-clip">

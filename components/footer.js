@@ -22,7 +22,9 @@ export default function Footer() {
         <section className="text-white py-10 flex flex-col items-center justify-center space-y-10 mb-5">
           <div className="flex items-center gap-x-5">
             <div className="w-3 h-3 bg-white hover:bg-black rounded-full" />
-            <h1 className="text-3xl font-bold">SkillUp Academy</h1>
+            <h1 className="bebasNeue tracking-wider text-[40px] lg:text-[64px] font-bold">
+              SkillUp Academy
+            </h1>
             <div className="w-3 h-3 bg-white hover:bg-black rounded-full" />
           </div>
           <div>

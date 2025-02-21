@@ -112,15 +112,15 @@ export const reviewCard = [
 export const navLinks = [
   {
     name: "About",
-    link: "#about",
+    link: "about",
   },
   {
     name: "Features",
-    link: "#features",
+    link: "features",
   },
   {
     name: "SignUp",
-    link: "#contact",
+    link: "contact",
   },
 ];
 
@@ -151,114 +151,24 @@ export const dashboard = [
   {
     icon: "/assets/dashboard/home.svg",
     link: "/dashboard",
+    name: "dashboard",
   },
   {
     icon: "/assets/dashboard/student.svg",
     link: "/dashboard/students",
+    name: "students",
   },
   {
     icon: "/assets/dashboard/course.svg",
-
     link: "/dashboard/course",
+    name: "courses",
   },
   {
     icon: "/assets/dashboard/analytics.svg",
     link: "/dashboard/analytics",
+    name: "analytics",
   },
 ];
-
-// export const students = [
-//   {
-//     name: "John Doe",
-//     email: "john.doe@university.edu",
-//     program: "Data Analytics",
-//     startDate: "Sept 10, 2023",
-//     fee: "GHS 5,000",
-//     courses: "5 Courses",
-//     avatar: "JD",
-//   },
-//   {
-//     name: "Jane Smith",
-//     email: "jane.smith@university.edu",
-//     program: "Business Data Analytics",
-//     startDate: "Aug 15, 2023",
-//     fee: "GHS 4,200",
-//     courses: "6 Courses",
-//     avatar: "JS",
-//   },
-//   {
-//     name: "Michael Johnson",
-//     email: "michael.johnson@university.edu",
-//     program: "Big Data & Machine Learning",
-//     startDate: "July 5, 2023",
-//     fee: "GHS 6,800",
-//     courses: "7 Courses",
-//     avatar: "MJ",
-//   },
-//   {
-//     name: "Emily Brown",
-//     email: "emily.brown@university.edu",
-//     program: "Statistical Data Analysis",
-//     startDate: "Oct 20, 2023",
-//     fee: "GHS 3,900",
-//     courses: "4 Courses",
-//     avatar: "EB",
-//   },
-//   {
-//     name: "David Wilson",
-//     email: "david.wilson@university.edu",
-//     program: "Data Science & Visualization",
-//     startDate: "Jan 12, 2024",
-//     fee: "GHS 7,500",
-//     courses: "8 Courses",
-//     avatar: "DW",
-//   },
-//   {
-//     name: "Sophia Martinez",
-//     email: "sophia.martinez@university.edu",
-//     program: "Business Intelligence & Data Analytics",
-//     startDate: "Feb 25, 2024",
-//     fee: "GHS 4,000",
-//     courses: "5 Courses",
-//     avatar: "SM",
-//   },
-//   {
-//     name: "Liam Anderson",
-//     email: "liam.anderson@university.edu",
-//     program: "Financial Data Analysis",
-//     startDate: "March 8, 2024",
-//     fee: "GHS 6,300",
-//     courses: "7 Courses",
-//     avatar: "LA",
-//   },
-//   {
-//     name: "Olivia Thomas",
-//     email: "olivia.thomas@university.edu",
-//     program: "Health Data Analytics",
-//     startDate: "April 14, 2024",
-//     fee: "GHS 4,700",
-//     courses: "6 Courses",
-//     avatar: "OT",
-//   },
-//   {
-//     name: "Ethan White",
-//     email: "ethan.white@university.edu",
-//     program: "Marketing Analytics",
-//     startDate: "May 22, 2024",
-//     fee: "GHS 5,400",
-//     courses: "5 Courses",
-//     avatar: "EW",
-//   },
-//   {
-//     name: "Ava Harris",
-//     email: "ava.harris@university.edu",
-//     program: "Data Mining & Predictive Analytics",
-//     startDate: "June 30, 2024",
-//     fee: "GHS 3,600",
-//     courses: "4 Courses",
-//     avatar: "AH",
-//   },
-// ];
 
 export const students = [
   {

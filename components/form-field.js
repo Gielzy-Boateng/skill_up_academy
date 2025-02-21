@@ -64,7 +64,7 @@ export default function FormField() {
     >
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10 " />
       <WidthConstraint className="py-10">
-        <h1 className="relative z-20 mb-10 text-start text-4xl font-bold text-[#FF4500]">
+        <h1 className="relative text-nowrap bebasNeue tracking-wider text-[40px] lg:text-[60px] z-20 mb-10 text-start text-4xl font-bold text-[#FF4500]">
           Sign Up Now!
         </h1>
         <div className="relative z-20 mx-auto max-w-[600px] flex-col items-center justify-center">

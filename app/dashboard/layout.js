@@ -4,11 +4,9 @@ import { dashboard } from "@/constants";
 
 export default function DashboardLayout({ children }) {
   return (
-    // <WidthConstraint className="xl:max-w-[1400px]">
     <div className="flex min-h-screen rounded-xl">
       <aside className=" flex bg-transparent lg:bg-[#1E3A8A] text-white font-bold flex-col items-center fixed left-0 top-0 bottom-0 justify-center gap-y-32">
-        <h1>Dashboard</h1>
-        <nav className="flex flex-col gap-y-10">
+        <nav className="hidden lg:flex flex-col gap-y-10">
           {dashboard.map((board, i) => (
             <Link href={board.link} key={i}>
               <Image
@@ -26,12 +24,11 @@ export default function DashboardLayout({ children }) {
           width={50}
           height={50}
           alt="Brand"
-          className="rounded-full"
+          className="rounded-full hidden"
         />
       </aside>
 
       <main className="flex-1 items-center justify-center">{children}</main>
     </div>
-    // </WidthConstraint>
   );
 }

@@ -2,15 +2,18 @@
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import { dashboard } from "@/constants";
 
 import { navLinks } from "@/constants";
 import { useEffect, useRef, useState } from "react";
 import { MenuIcon, XIcon } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function MobileNavBar() {
   const [display, setDisplay] = useState(false);
   const menuRef = useRef(null);
+
+  const pathname = usePathname();
 
   function handleDisplay() {
     setDisplay(true);
@@ -24,6 +27,11 @@ export default function MobileNavBar() {
 
   function getIntouch() {
     router.push("/dashboard");
+    setDisplay(false);
+  }
+
+  function goToHome() {
+    router.push("/");
     setDisplay(false);
   }
 
@@ -67,17 +75,57 @@ export default function MobileNavBar() {
     <nav className="px-3 z-50 lg:hidden">
       <section
         className={` ${
-          scrolled ? "bg-white" : ""
-        } flex transition-all duration-300 z-50 items-center justify-between px-5 fixed top-0 left-0 right-0`}
+          scrolled
+            ? pathname.startsWith("/dashboard")
+              ? "bg-black"
+              : "bg-orange-500"
+            : ""
+        } flex transition-all duration-300 z-50 ${
+          pathname.startsWith("/dashboard")
+            ? "items-center justify-between py-2"
+            : "items-center justify-between"
+        }  px-3 py-3 fixed top-0 left-0 right-0`}
       >
-        <div className="py-4">
+        <div>
+          <div
+            className={`${
+              pathname === "/"
+                ? "hidden"
+                : "flex items-center space-x-5  max-w-[200px]"
+            } `}
+          >
+            {dashboard.map((board, i) => (
+              <Link
+                key={i}
+                href={board.link}
+                className={`${
+                  pathname === board.link ? "bg-[#60A5FA] px-2 rounded-lg" : ""
+                } flex flex-col items-center`}
+              >
+                <Image src={board.icon} width={40} height={40} alt="Icons" />
+                <p
+                  className={`${
+                    scrolled ? "text-white" : "text-black"
+                  } text-[12px]`}
+                >
+                  {board.name}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div
+          className={`${
+            pathname.startsWith("/dashboard") ? "hidden" : "block"
+          } py-4`}
+        >
           <Link href="/">
             <Image
               src="/assets/home/logo.jpg"
               alt="brandlogo"
               width={80}
               height={80}
-              className="rounded-full"
+              className="rounded-full hidden"
               priority
             />
           </Link>
@@ -85,9 +133,9 @@ export default function MobileNavBar() {
         <div className="">
           <button onClick={handleDisplay} className="font-bold">
             <MenuIcon
-              size={50}
+              size={40}
               fontWeight="bold"
-              color={scrolled ? "black" : "white"}
+              color={scrolled ? "white" : "black"}
             />
           </button>
         </div>
@@ -104,7 +152,7 @@ export default function MobileNavBar() {
             className="bg-white shadow-lg z-50 fixed top-0 right-0 left-0 md:hidden w-full rounded-3xl p-5"
           >
             <div className="flex items-center justify-between mb-10">
-              <Link href="/">
+              <button href="/" onClick={goToHome}>
                 <Image
                   src="/assets/home/logo.jpg"
                   alt="brandLogo"
@@ -113,7 +161,7 @@ export default function MobileNavBar() {
                   className="rounded-full"
                   priority
                 />
-              </Link>
+              </button>
               <button onClick={handleClose} className="">
                 <XIcon color="black" size={45} />
               </button>
@@ -145,8 +193,16 @@ export default function MobileNavBar() {
                 })}
               </ul>
             </div>
-            <div className="flex items-center justify-center center bg-[#FF7A00] hover:bg-black hover:text-white transition duration-300 rounded-full text-white py-2 mt-5">
-              <button onClick={getIntouch}>Dashboard</button>
+            <div
+              className={`flex items-center justify-center center ${
+                pathname.startsWith("/dashboard")
+                  ? "bg-[#1E3A8A]"
+                  : "bg-[#FF7A00]"
+              }  hover:bg-black hover:text-white transition duration-300 rounded-full text-white py-2 mt-5`}
+            >
+              <button className="flex" onClick={getIntouch}>
+                Dashboard
+              </button>
             </div>
           </motion.div>
         )}

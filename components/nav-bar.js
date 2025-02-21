@@ -4,10 +4,13 @@ import { navLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import MobileNavBar from "./mobile-navbar";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const pathName = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,15 +49,20 @@ export default function NavBar() {
           <h1>SkillUp Academy</h1>
         </Link>
         <div className="scroll-smooth flex items-center  gap-x-5">
-          {navLinks.map((nav, i) => (
-            <Link
-              key={i}
-              href={nav.link}
-              className="transition-all duration-300 hover:text-[#FF6D00]"
-            >
-              {nav.name}
-            </Link>
-          ))}
+          {navLinks.map((nav, i) => {
+            const linkPaths =
+              pathName === "/" ? `#${nav.link}` : `/#${nav.link}`;
+
+            return (
+              <Link
+                key={i}
+                href={linkPaths}
+                className="transition-all duration-300 hover:text-[#FF6D00]"
+              >
+                {nav.name}
+              </Link>
+            );
+          })}
         </div>
         <Link
           href="/dashboard"

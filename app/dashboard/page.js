@@ -60,11 +60,15 @@ export default function Dashboard() {
                 src="/assets/dashboard/active.jpg"
                 width={50}
                 height={50}
+                priority
                 alt="Users"
               />
             </div>
           </div>
         </div>
+        <h1 className="mt-12 text-[#1E3A8A]  text-center bebasNeue tracking-wider text-[30px] leading-normal lg:text-[40px] font-bold">
+          Recent Signups
+        </h1>
         <StudentCard />
       </section>
     </WidthConstraint>

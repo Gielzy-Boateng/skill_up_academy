@@ -75,11 +75,7 @@ export default function MobileNavBar() {
     <nav className="px-3 z-50 lg:hidden">
       <section
         className={` ${
-          scrolled
-            ? pathname.startsWith("/dashboard")
-              ? "bg-black"
-              : "bg-navGradient bg-customSize animate-customAnimation backdrop-blur-lg"
-            : ""
+          scrolled ? (pathname.startsWith("/dashboard") ? "bg-black" : "") : ""
         } flex transition-all duration-300 z-50 ${
           pathname.startsWith("/dashboard")
             ? "items-center justify-between py-2"
@@ -131,12 +127,31 @@ export default function MobileNavBar() {
           </Link>
         </div>
         <div className="">
-          <button onClick={handleDisplay} className="font-bold">
-            <MenuIcon
-              size={40}
-              fontWeight="bold"
-              color={scrolled ? "white" : "black"}
-            />
+          <button
+            onClick={handleDisplay}
+            className={` ${
+              scrolled
+                ? pathname === "/"
+                  ? "bg-customGradient bg-customSize animate-customAnimation rounded-full p-2 inline-block"
+                  : ""
+                : ""
+            } font-bold`}
+          >
+            <div
+              className={` ${
+                scrolled
+                  ? pathname === "/"
+                    ? "bg-black rounded-full p-3"
+                    : ""
+                  : ""
+              } font-bold`}
+            >
+              <MenuIcon
+                size={40}
+                fontWeight="bold"
+                color={scrolled ? "white" : "black"}
+              />
+            </div>
           </button>
         </div>
       </section>

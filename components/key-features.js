@@ -5,7 +5,7 @@ import FeaturedCourses from "./featured-courses";
 
 export default function KeyFeatures() {
   return (
-    <div id="features" className="scroll-m-20">
+    <div id="features" className="scroll-m-20 mt-32">
       <WidthConstraint>
         <h1 className="mb-10 text-center lg:text-start bebasNeue tracking-wider text-[40px] lg:text-[50px] font-bold text-[#FF5722]">
           What Makes Us Different
@@ -30,7 +30,7 @@ export default function KeyFeatures() {
                     />
                   </div>
                   <div className="space-y-3">
-                    <h1 className="text-nowrap text-lg font-bold">
+                    <h1 className=" bebasNeue tracking-widest text-[20px] lg:text-[21px] text-nowrap text-lg font-bold">
                       {card.title}
                     </h1>
                     <p>{card.description}</p>

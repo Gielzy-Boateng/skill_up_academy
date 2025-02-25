@@ -4,7 +4,7 @@ import { courseDescription } from "@/constants";
 
 export default function ProgramInfo() {
   return (
-    <div id="about" className="mt-20 scroll-smooth scroll-m-20">
+    <div id="about" className="mt-32 scroll-smooth scroll-m-20">
       <WidthConstraint>
         <h1 className=" bebasNeue tracking-wider text-[40px] lg:text-[50px] mb-10 text-center lg:text-start font-bold text-[#FF5722]">
           Overview & Objectives

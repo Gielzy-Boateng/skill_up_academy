@@ -11,10 +11,10 @@ export default function Dashboard() {
         <h1 className="bebasNeue tracking-wider text-[40px] leading-normal lg:text-[50px] text-[#1E3A8A] font-bold ">
           Welcome, Admin!
         </h1>
-        <h2 className="bebasNeue tracking-wider text-[20px] leading-normal lg:text-[30px]">
+        <h2 className="bebasNeue tracking-wider text-[20px] leading-normal lg:text-[25px]">
           Ready to lead and make an impact?{" "}
         </h2>
-        <h3 className="bebasNeue tracking-wider text-[20px] leading-normal lg:text-[30px]">
+        <h3 className="bebasNeue tracking-wider text-[20px] leading-normal lg:text-[25px]">
           Please have a look around
         </h3>
       </div>

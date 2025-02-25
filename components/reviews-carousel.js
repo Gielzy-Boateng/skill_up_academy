@@ -1,4 +1,5 @@
 "use client";
+import EmblaCarousel from "embla-carousel";
 import { useRef } from "react";
 import WidthConstraint from "./width-constraint";
 import { Carousel, CarouselSlide } from "@mantine/carousel";
@@ -31,7 +32,7 @@ export default function ReviewsCarousel() {
                   <p className="py-4 px-6 bg-orange-500 text-white rounded-full">
                     {review.letterImage}
                   </p>
-                  <p className=" text-wrap lg:text-nowrap text-lg font-bold text-emerald-900">
+                  <p className="bebasNeue tracking-widest text-[21px] lg:text-[21px] text-wrap lg:text-nowrap text-lg font-bold text-emerald-900">
                     {review.name}
                   </p>
                 </div>

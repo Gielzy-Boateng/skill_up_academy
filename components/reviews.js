@@ -3,7 +3,7 @@ import WidthConstraint from "./width-constraint";
 
 export default function Reviews() {
   return (
-    <div className="mt-20">
+    <div className="mt-32">
       <WidthConstraint>
         <h1 className="mb-10 text-center  lg:text-start bebasNeue tracking-wider text-[40px] lg:text-[60px] font-bold text-[#FF5722]">
           Reviews

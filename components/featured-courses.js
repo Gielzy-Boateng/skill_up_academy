@@ -5,7 +5,9 @@ import Link from "next/link";
 export default function FeaturedCourses() {
   return (
     <div className="flex flex-col gap-y-5 items-start justify-center lg:w-[700px]">
-      <h1 className="text-3xl font-bold">{featuredCourses.title}</h1>
+      <h1 className="text-3xl font-bold bebasNeue tracking-wider text-[25px] lg:text-[30px]">
+        {featuredCourses.title}
+      </h1>
       <p className="text-xl">{featuredCourses.description}</p>
       <div className="grid grid-cols-2 gap-4  ">
         {featuredCourses.language.map((lang, i) => (

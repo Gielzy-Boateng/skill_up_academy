@@ -13,7 +13,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 5, type: spring, bounce: 6 }}
+            transition={{ duration: 5, type: spring, bounce: 10 }}
             // transition={{ type: "spring", stiffness: 100, damping: 20 }}
             // transition={{ type: "spring", bounce: 2, duration: 2 }}
             className="bebasNeue tracking-wider text-[60px] lg:text-[64px]   text-center lg:text-start drop-shadow-[8px_4px_6px_black]"

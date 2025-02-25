@@ -1,5 +1,4 @@
 "use client";
-import EmblaCarousel from "embla-carousel";
 import { useRef } from "react";
 import WidthConstraint from "./width-constraint";
 import { Carousel, CarouselSlide } from "@mantine/carousel";

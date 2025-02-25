@@ -78,7 +78,7 @@ export default function MobileNavBar() {
           scrolled
             ? pathname.startsWith("/dashboard")
               ? "bg-black"
-              : "bg-orange-500"
+              : "bg-navGradient bg-customSize animate-customAnimation backdrop-blur-lg"
             : ""
         } flex transition-all duration-300 z-50 ${
           pathname.startsWith("/dashboard")

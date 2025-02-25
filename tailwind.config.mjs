@@ -12,7 +12,11 @@ export default {
       backgroundImage: {
         customGradient:
           "linear-gradient(-45deg, #ee7752, #ff006275, #23a6d5, #23d5ab)",
-        aboutGradient: "linear-gradient(45deg, #06bae4, #b9d644, #f37244)",
+        // navGradient: "linear-gradient(-45deg, #FF5722, #B8E6C1, #f37244)",
+        // navGradient:
+        //   "linear-gradient(-45deg, #FF5722, #FF8A50, #F37244, #E65100)",
+        navGradient:
+          "linear-gradient(-45deg, #ee7752, #ff006275, #FF5722, #23d5ab)",
       },
 
       backgroundSize: {

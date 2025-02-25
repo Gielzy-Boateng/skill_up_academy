@@ -28,7 +28,7 @@ export default function ReviewsCarousel() {
             <div className=" bg-[#B8E6C1] rounded-2xl py-5 px-3 lg:px-10">
               <div className="flex flex-col items-start">
                 <div className="flex items-center gap-x-3">
-                  <p className="py-6 px-8 bg-orange-500 text-white rounded-full">
+                  <p className="py-4 px-6 bg-orange-500 text-white rounded-full">
                     {review.letterImage}
                   </p>
                   <p className=" text-wrap lg:text-nowrap text-lg font-bold text-emerald-900">

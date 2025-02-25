@@ -12,15 +12,15 @@ export default function ProgramInfo() {
         <section className="flex flex-col gap-y-20 lg:gap-y-0 lg:flex-row items-center justify-between">
           <div>
             <Image
-              src={"/assets/home/info.png"}
+              src={"/assets/home/upscale.jpg"}
               alt="Knowlege"
-              width={600}
-              height={600}
+              width={500}
+              height={500}
               className="rounded-3xl"
             />
           </div>
           <div className="max-w-[600px] flex items-center gap-y-3 text-lg flex-col">
-            <h1 className="text-center bebasNeue tracking-wider text-[23px] lg:text-[35px] leading-normal text-[#FF4500] font-semibold">
+            <h1 className="text-center bebasNeue tracking-wider text-[23px] lg:text-[30px] leading-normal text-[#FF4500] font-semibold">
               Unlock the world of Data Analytics with SkillUp Academy&apos;s
               Introductory Course.
             </h1>
@@ -29,7 +29,7 @@ export default function ProgramInfo() {
               skills, this program is designed to take you from beginner to
               confident data professional in just a few weeks.
             </p>
-            <p className="text-center bebasNeue tracking-wider text-[23px] leading-normal lg:text-[35px] text-[#FF4500]  font-semibold">
+            <p className="text-center bebasNeue tracking-wider text-[23px] leading-normal lg:text-[30px] text-[#FF4500]  font-semibold">
               Why Choose SkillUp Academy?
             </p>
 

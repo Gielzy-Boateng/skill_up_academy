@@ -9,8 +9,8 @@ export default function DashboardLayout({ children }) {
 
   return (
     <div className="flex min-h-screen rounded-xl">
-      <aside className="pl-1 pr-2 flex bg-transparent lg:bg-[#1E3A8A] transition-all duration-500 cursor-pointer text-white font-bold flex-col items-center fixed left-0 top-0 bottom-0 justify-center gap-y-32">
-        <nav className="hidden lg:flex flex-col gap-y-10">
+      <aside className="hidden lg:flex pl-1 pr-2 bg-transparent lg:bg-[#1E3A8A] transition-all duration-500 cursor-pointer text-white font-bold flex-col items-center fixed left-0 top-0 bottom-0 justify-center gap-y-32">
+        <nav className="flex flex-col gap-y-10">
           {dashboard.map((board, i) => {
             const isActive = pathName === board.link;
             return (
@@ -19,7 +19,7 @@ export default function DashboardLayout({ children }) {
                 key={i}
                 className={`${
                   isActive
-                    ? "border-4 py-3 px-1 bg-orange-500 rounded-lg border-orange-400"
+                    ? "border-4 py-3 px-1 bg-[#37474F] rounded-lg border-[#22D1FF]"
                     : ""
                 }  flex flex-col items-center gap-y-3 justify-center`}
               >
